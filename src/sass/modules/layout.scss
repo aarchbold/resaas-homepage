@@ -156,5 +156,54 @@ body {
     }
 }
 
+// features screenshot
+
+.landing-features-screenshot {
+    max-width: rem(836px);
+    max-height: rem(614px);
+    margin: 0 auto;
+    img {
+        transition: opacity 0.15s, top 0.250s;
+        position: relative;
+        opacity: 0;
+        top: rem(80px);
+        &.-active {
+            opacity: 1;
+            top: 0;
+        }
+    }
+}
+
+// landing features
+
+.landing-features {
+    margin: 0 auto 0;
+}
+
+.landing-features-bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        float: left;
+        width: 33.3%;
+    }
+}
+
+.landing-features-item {
+    text-align: center;
+    margin: 0 rem(18px);
+    h2 {
+        text-transform: uppercase;
+        font-size: rem(20px);
+        margin-bottom: rem(40px);
+    }
+}
+
+.landing-features-cta {
+    text-align: center;
+    margin-top: rem(75px);
+}
+
 
 

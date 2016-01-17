@@ -33,3 +33,9 @@
     @extend %btn;
 }
 
+.btn-secondary {
+    @extend %btn;
+    background-color: $color-deep-purple;
+    box-shadow: rem(5px) rem(20px) rem(50px) rgba(0, 0, 0, 0.5);
+}
+

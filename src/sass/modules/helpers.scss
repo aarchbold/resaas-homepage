@@ -1,6 +1,20 @@
 // Functions
 
 // Mixins
+@keyframes feature-bounce {
+    0% {
+        top: rem(60px);
+    }
+    60% {
+        top: rem(0px);
+    }
+    75% {
+        top: rem(20px);
+    }
+    100% {
+        top: rem(0px);
+    }
+}
 
 // Just regular re-usable css
 .group:after {
@@ -8,5 +22,6 @@
   display: table;
   clear: both;
 }
+
 
 
