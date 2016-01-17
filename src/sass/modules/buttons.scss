@@ -1,0 +1,35 @@
+// main buttons
+%btn {
+    -webkit-appearance: none;
+    transition: opacity 0.125s, background-color 0.125s, color 0.125s;
+    display: inline-block;
+    position: relative;
+    border-radius: 3px;
+    padding: rem(21px) rem(80px);
+    background-color: $color-teal;
+    font-size: rem(14px);
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.25;
+    cursor: pointer;
+    color: $color-white;
+    &:active {
+        top: 2px;
+    }
+    &:focus {
+        outline: 0;
+    }
+    &:hover {
+        background-color: $color-white;
+        color: $color-blue-grey;
+    }
+    &[disabled] {
+        opacity: 0.45;
+    }
+}
+
+.btn-primary {
+    @extend %btn;
+}
+

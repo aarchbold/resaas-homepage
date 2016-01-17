@@ -1,0 +1,19 @@
+// global functions
+@function rem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+// global settings
+
+// pallete
+$color-deep-purple: #181929;
+$color-teal: #1fbad6;
+$color-white: #eaebef;
+$color-blue-grey: #181e23;
+$color-blue-grey-dark: #2b363f;
+$color-blue-grey-dark2: #323d47;
+$color-blue-grey-light: #7b8998;
+$color-grey-dark: #262626;
+$color-grey: #464646;
+$color-grey-light: #909090;

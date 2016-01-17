@@ -1,0 +1,120 @@
+// main layout styles
+
+body {
+    font-family: 'Open Sans',serif;
+    color: $color-grey;
+    font-size: rem(16px);
+}
+
+.wrap-container {
+    width: 100%;
+}
+
+.section-hero {
+    height: rem(722px);
+    background: url(../images/backgrounds/bg-hero.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    // background-attachment: fixed;
+}
+
+.section-features {
+    background: url(../images/backgrounds/bg-features.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    color: $color-white;
+}
+
+.section-hero-wrap {
+    position: relative;
+    max-width: rem(1200px);
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    padding-top: rem(20px);
+}
+
+.section-wrap {
+    max-width: rem(1400px);
+    text-align: center;
+    padding: rem(100px) 0;
+    margin: 0 auto;
+}
+
+.section-header {
+    font-size: rem(30px);
+    text-transform: uppercase;
+    margin-bottom: rem(45px);
+}
+
+.section-subtitle {
+    max-width: rem(778px);
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.section-bumper {
+    text-align: center;
+    margin-top: rem(15px);
+    display: block;
+    font-weight: 600;
+}
+
+.landing-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.landing-hero-title {
+    color: $color-white;
+    font-size: rem(36px);
+    letter-spacing: 2px;
+}
+
+.landing-hero-subtitle {
+    color: $color-white;
+    margin: rem(5px) 0 rem(70px) 0;
+    font-size: rem(22px);
+    letter-spacing: 1px;
+}
+
+// what we do section
+
+.landing-whatwedo {
+    max-width: rem(1100px);
+    margin: rem(90px) auto 0;
+}
+
+.landing-whatwedo-bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        float: left;
+        width: 25%;
+    }
+}
+
+.landing-whatwedo-item {
+    text-align: center;
+    margin: 0 rem(18px);
+    h2 {
+        text-transform: uppercase;
+        font-size: rem(20px);
+    }
+    a {
+        transition: color 0.125s;
+        text-transform: uppercase;
+        color: $color-teal;
+        text-decoration: none;
+        &:hover {
+            color: $color-deep-purple;
+        }
+    }
+    img {
+        margin-bottom: rem(10px);
+    }
+}
+
+
+

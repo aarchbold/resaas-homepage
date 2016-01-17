@@ -1,0 +1,155 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:600,400,300,200,100");
+.font-light {
+  font-weight: 100;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.btn-primary {
+  -webkit-appearance: none;
+  transition: opacity 0.125s, background-color 0.125s, color 0.125s;
+  display: inline-block;
+  position: relative;
+  border-radius: 3px;
+  padding: 1.3125rem 5rem;
+  background-color: #1fbad6;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.25;
+  cursor: pointer;
+  color: #eaebef;
+}
+.btn-primary:active {
+  top: 2px;
+}
+.btn-primary:focus {
+  outline: 0;
+}
+.btn-primary:hover {
+  background-color: #eaebef;
+  color: #181e23;
+}
+[disabled].btn-primary {
+  opacity: 0.45;
+}
+
+body {
+  font-family: 'Open Sans',serif;
+  color: #464646;
+  font-size: 1rem;
+}
+
+.wrap-container {
+  width: 100%;
+}
+
+.section-hero {
+  height: 45.125rem;
+  background: url(../images/backgrounds/bg-hero.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.section-features {
+  background: url(../images/backgrounds/bg-features.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  color: #eaebef;
+}
+
+.section-hero-wrap {
+  position: relative;
+  max-width: 75rem;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: 0 auto;
+  padding-top: 1.25rem;
+}
+
+.section-wrap {
+  max-width: 87.5rem;
+  text-align: center;
+  padding: 6.25rem 0;
+  margin: 0 auto;
+}
+
+.section-header {
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  margin-bottom: 2.8125rem;
+}
+
+.section-subtitle {
+  max-width: 48.625rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.section-bumper {
+  text-align: center;
+  margin-top: 0.9375rem;
+  display: block;
+  font-weight: 600;
+}
+
+.landing-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.landing-hero-title {
+  color: #eaebef;
+  font-size: 2.25rem;
+  letter-spacing: 2px;
+}
+
+.landing-hero-subtitle {
+  color: #eaebef;
+  margin: 0.3125rem 0 4.375rem 0;
+  font-size: 1.375rem;
+  letter-spacing: 1px;
+}
+
+.landing-whatwedo {
+  max-width: 68.75rem;
+  margin: 5.625rem auto 0;
+}
+
+.landing-whatwedo-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.landing-whatwedo-bullets li {
+  float: left;
+  width: 25%;
+}
+
+.landing-whatwedo-item {
+  text-align: center;
+  margin: 0 1.125rem;
+}
+.landing-whatwedo-item h2 {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+.landing-whatwedo-item a {
+  transition: color 0.125s;
+  text-transform: uppercase;
+  color: #1fbad6;
+  text-decoration: none;
+}
+.landing-whatwedo-item a:hover {
+  color: #181929;
+}
+.landing-whatwedo-item img {
+  margin-bottom: 0.625rem;
+}
