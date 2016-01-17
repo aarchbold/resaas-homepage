@@ -151,3 +151,42 @@ body {
 .landing-whatwedo-item img {
   margin-bottom: 0.625rem;
 }
+
+.landing-features-nav-container {
+  text-align: center;
+}
+
+.landing-features-nav {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.landing-features-nav li {
+  transition: all 0.125s;
+  float: left;
+  border: 3px solid #eaebef;
+  border-left: none;
+}
+.landing-features-nav li:first-child {
+  border-left: 3px solid #eaebef;
+  border-radius: 1.5625rem 0 0 1.5625rem;
+}
+.landing-features-nav li:last-child {
+  border-radius: 0 1.5625rem 1.5625rem 0;
+}
+.landing-features-nav li:hover, .landing-features-nav li.-active {
+  background-color: #eaebef;
+  color: #181929;
+}
+.landing-features-nav li:hover a, .landing-features-nav li.-active a {
+  color: #181929;
+}
+.landing-features-nav li a {
+  letter-spacing: 0.0625rem;
+  transition: all 0.125s;
+  color: #eaebef;
+  text-decoration: none;
+  display: block;
+  padding: 0.75rem 2.1875rem;
+}

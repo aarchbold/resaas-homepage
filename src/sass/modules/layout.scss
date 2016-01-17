@@ -116,5 +116,45 @@ body {
     }
 }
 
+// features nav
+
+.landing-features-nav-container {
+    text-align: center;
+}
+.landing-features-nav {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    li {
+        transition: all 0.125s;
+        float: left;
+        border: 3px solid $color-white;
+        border-left: none;
+        &:first-child {
+            border-left: 3px solid $color-white;
+            border-radius: rem(25px) 0 0 rem(25px);
+        }
+        &:last-child {
+            border-radius: 0 rem(25px) rem(25px) 0;
+        }
+        &:hover, &.-active {
+            background-color: $color-white;
+            color: $color-deep-purple;
+            a {
+                color: $color-deep-purple;
+            }
+        }
+        a {
+            letter-spacing: rem(1px);
+            transition: all 0.125s;
+            color: $color-white;
+            text-decoration: none;
+            display: block;
+            padding: rem(12px) rem(35px);
+        }
+    }
+}
+
 
 
