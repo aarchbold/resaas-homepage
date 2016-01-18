@@ -205,5 +205,49 @@ body {
     margin-top: rem(75px);
 }
 
+// landing integrate
+
+.landing-integrate {
+    text-align: center;
+}
+
+.landing-integrate-bullets {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        transition: all 0.125s;
+        opacity: 0.7;
+        float: left;
+        height: rem(95px);
+        background: url(../images/sprites/sprite-integrate.png) 0 0 no-repeat;
+        &:hover {
+            opacity: 1;
+        }
+        &.landing-bullet-clareity {
+            width: rem(211px);
+        }
+        &.landing-bullet-rapattoni {
+            width: rem(249px);
+            background-position: rem(-211px) rem(0px);
+        }
+        &.landing-bullet-agentachieve {
+            width: rem(283px);
+            background-position: rem(-460px) rem(0px);
+        }
+        &.landing-bullet-matterport {
+            width: rem(252px);
+            background-position: rem(-743px) rem(0px);
+        }
+        a {
+            transition: all 0.125s;
+            display: block;
+            height: rem(95px);
+            text-indent: -9999px;
+        }
+    }
+}
+
 
 
