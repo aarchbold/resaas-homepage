@@ -23,6 +23,12 @@ body {
     color: $color-white;
 }
 
+.section-testimonials {
+    background: url(../images/backgrounds/bg-testimonials.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    color: $color-white;
+}
+
 .section-hero-wrap {
     position: relative;
     max-width: rem(1200px);
@@ -50,6 +56,10 @@ body {
     max-width: rem(778px);
     margin: 0 auto;
     line-height: 1.6;
+    &.large-subtitle {
+        max-width: rem(1100px);
+        font-size: rem(22px);
+    }
 }
 
 .section-bumper {
@@ -246,6 +256,56 @@ body {
             height: rem(95px);
             text-indent: -9999px;
         }
+    }
+}
+
+// testimonials section
+
+.landing-testimonials {
+    list-style: none;
+    margin: rem(120px) 0 0 0;
+    padding: 0;
+    li {
+        cursor: pointer;
+        transition: all 0.125s;
+        background-color: $color-white; 
+        float: left;
+        width: 20%;
+        margin: 0 2.5%;
+        height: rem(284px);
+        opacity: 0.5;
+        &.-active, &:hover {
+            opacity: 1;
+        }
+        h3 {
+            letter-spacing: rem(1px);
+            text-transform: uppercase;
+            font-size: rem(18px);
+            margin: rem(5px) 0 0 0;
+        }
+        p {
+            font-size: rem(14px);
+            margin: rem(5px) 0;
+            min-height: rem(30px);
+        }
+    }
+    .landing-testimonial {
+        position: relative;
+        top: 50%;
+        cursor: pointer;
+        transform: translateY(-50%);
+        color: $color-grey;
+        padding: 0 rem(15px);
+    }
+}
+
+.landing-testimonial-text {
+    display: none;
+    height: rem(50px);
+    font-size: rem(22px);
+    padding-top: rem(28px);
+    &.-active {
+        display: block;
     }
 }
 
