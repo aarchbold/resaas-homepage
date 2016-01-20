@@ -5,31 +5,31 @@
 
 @-webkit-keyframes feature-bounce {
   0% {
-    top: 3.75rem;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
   }
   60% {
-    top: 0rem;
-  }
-  75% {
-    top: 1.25rem;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
   100% {
-    top: 0rem;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 
 @keyframes feature-bounce {
   0% {
-    top: 3.75rem;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
   }
   60% {
-    top: 0rem;
-  }
-  75% {
-    top: 1.25rem;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
   100% {
-    top: 0rem;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 .group:after {
@@ -122,9 +122,9 @@ body {
 }
 
 .section-wrap {
-  max-width: 87.5rem;
+  max-width: 85rem;
   text-align: center;
-  padding: 6.25rem 0;
+  padding: 6.25rem 1.25rem;
   margin: 0 auto;
 }
 
@@ -253,10 +253,12 @@ body {
 .landing-features-screenshot img {
   transition: opacity 0.15s, top 0.250s;
   position: relative;
+  display: none;
   opacity: 0;
   top: 5rem;
 }
 .landing-features-screenshot img.-active {
+  display: block;
   opacity: 1;
   top: 0;
 }
@@ -342,13 +344,17 @@ body {
   transition: all 0.125s;
   background-color: #eaebef;
   float: left;
-  width: 20%;
-  margin: 0 2.5%;
+  width: 22%;
+  margin: 0 1.5%;
   height: 17.75rem;
   opacity: 0.5;
 }
 .landing-testimonials li.-active, .landing-testimonials li:hover {
   opacity: 1;
+  -webkit-animation-name: feature-bounce;
+  animation-name: feature-bounce;
+  -webkit-animation-duration: 0.375s;
+  animation-duration: 0.375s;
 }
 .landing-testimonials li h3 {
   letter-spacing: 0.0625rem;

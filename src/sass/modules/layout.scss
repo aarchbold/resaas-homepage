@@ -40,9 +40,9 @@ body {
 }
 
 .section-wrap {
-    max-width: rem(1400px);
+    max-width: rem(1360px);
     text-align: center;
-    padding: rem(100px) 0;
+    padding: rem(100px) rem(20px);
     margin: 0 auto;
 }
 
@@ -175,9 +175,11 @@ body {
     img {
         transition: opacity 0.15s, top 0.250s;
         position: relative;
+        display: none;
         opacity: 0;
         top: rem(80px);
         &.-active {
+            display: block;
             opacity: 1;
             top: 0;
         }
@@ -270,12 +272,14 @@ body {
         transition: all 0.125s;
         background-color: $color-white; 
         float: left;
-        width: 20%;
-        margin: 0 2.5%;
+        width: 22%;
+        margin: 0 1.5%;
         height: rem(284px);
         opacity: 0.5;
         &.-active, &:hover {
             opacity: 1;
+            animation-name: feature-bounce;
+            animation-duration: (0.25s * 1.5);
         }
         h3 {
             letter-spacing: rem(1px);
