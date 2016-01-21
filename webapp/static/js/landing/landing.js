@@ -75,20 +75,33 @@ $.fn.showFeature = function() {
     var $featureLinks = $('.landing-feature-link', $('.landing-whatwedo-bullets')),
         $context = $('.section-features'),
         $navItems = $('.landing-features-nav li', $context),
-        $images = $('.landing-features-screenshot', $context);
+        $images = $('.landing-features-screenshot', $context),
+        $features = $('.landing-features-bullets', $context);
 
     console.log($featureLinks);
 
     function showFeature(feature) {
         console.log(feature);
+        $navItems.removeClass('-active');
+        $images.removeClass('-active');
+        $features.removeClass('-active');
+
         if (feature === '#agents') {
             $('.feature-nav-agents', $context).addClass('-active');
+            $('.feature-image-agents', $context).addClass('-active');
+            $('.feature-content-agents', $context).addClass('-active');
         } else if (feature === '#brokers') {
             $('.feature-nav-brokers', $context).addClass('-active');
+            $('.feature-image-brokers', $context).addClass('-active');
+            $('.feature-content-brokers', $context).addClass('-active');
         } else if (feature === '#franchises') {
             $('.feature-nav-franchises', $context).addClass('-active');
+            $('.feature-image-franchises', $context).addClass('-active');
+            $('.feature-content-franchises', $context).addClass('-active');
         } else if (feature === '#mlss') {
             $('.feature-nav-mlss', $context).addClass('-active');
+            $('.feature-image-mlss', $context).addClass('-active');
+            $('.feature-content-mlss', $context).addClass('-active');
         }
     }
 
@@ -103,8 +116,6 @@ $.fn.showFeature = function() {
 
     $navItems.click(function(e) {
         e.preventDefault();
-        $navItems.removeClass('-active');
-
         showFeature($('a', $(this)).attr('href'))
     });
 

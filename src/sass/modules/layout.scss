@@ -169,13 +169,15 @@ body {
 // features screenshot
 
 .landing-features-screenshot {
+    position: relative;
     max-width: rem(836px);
     max-height: rem(614px);
     margin: 0 auto;
+    height: rem(614px);
     img {
-        transition: opacity 0.15s, top 0.250s;
-        position: relative;
-        display: none;
+        position: absolute;
+        transition: opacity 0.05s, top 0.150s;
+        display: block;
         opacity: 0;
         top: rem(80px);
         &.-active {
@@ -193,9 +195,16 @@ body {
 }
 
 .landing-features-bullets {
+    transition: all 0.125s;
     list-style: none;
     margin: 0;
     padding: 0;
+    display: none;
+    opacity: 0;
+    &.-active {
+        display: block;
+        opacity: 1;
+    }
     li {
         float: left;
         width: 33.3%;
