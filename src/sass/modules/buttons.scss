@@ -14,6 +14,10 @@
     line-height: 1.25;
     cursor: pointer;
     color: $color-white;
+    @media (max-width: $breakpoint-phablet) {
+        text-transform: uppercase;
+        padding: rem(15px) rem(25px);
+    }
     &:active {
         top: 2px;
     }

@@ -4,7 +4,9 @@
     @return #{$remSize}rem;
 }
 
-// global settings
+// Breakpoints
+$breakpoint-tablet: 778px;
+$breakpoint-phablet: 640px;
 
 // pallete
 $color-deep-purple: #181929;
@@ -17,3 +19,4 @@ $color-blue-grey-light: #7b8998;
 $color-grey-dark: #262626;
 $color-grey: #464646;
 $color-grey-light: #909090;
+$color-feature-border: #ededed;

@@ -54,6 +54,12 @@
   cursor: pointer;
   color: #eaebef;
 }
+@media (max-width: 640px) {
+  .btn-primary, .btn-secondary, .btn-primary-inverse {
+    text-transform: uppercase;
+    padding: 0.9375rem 1.5625rem;
+  }
+}
 .btn-primary:active, .btn-secondary:active, .btn-primary-inverse:active {
   top: 2px;
 }
@@ -95,6 +101,13 @@ body {
   height: 45.125rem;
   background: url(../images/backgrounds/bg-hero.jpg) 50% 50% no-repeat;
   background-size: cover;
+  padding: 0 1.25rem;
+}
+@media (max-width: 640px) {
+  .section-hero {
+    font-size: 1.5625rem;
+    height: 40.9375rem;
+  }
 }
 
 .section-features {
@@ -127,11 +140,22 @@ body {
   padding: 6.25rem 1.25rem;
   margin: 0 auto;
 }
+@media (max-width: 640px) {
+  .section-wrap {
+    padding: 1.875rem 1.25rem;
+  }
+}
 
 .section-header {
   font-size: 1.875rem;
   text-transform: uppercase;
   margin-bottom: 2.8125rem;
+}
+@media (max-width: 640px) {
+  .section-header {
+    font-size: 1.125rem;
+    margin-bottom: 1.875rem;
+  }
 }
 
 .section-subtitle {
@@ -142,6 +166,11 @@ body {
 .section-subtitle.large-subtitle {
   max-width: 68.75rem;
   font-size: 1.375rem;
+}
+@media (max-width: 640px) {
+  .section-subtitle {
+    font-size: 0.9375rem;
+  }
 }
 
 .section-bumper {
@@ -162,6 +191,11 @@ body {
   font-size: 2.25rem;
   letter-spacing: 2px;
 }
+@media (max-width: 640px) {
+  .landing-hero-title {
+    font-size: 1.5625rem;
+  }
+}
 
 .landing-hero-subtitle {
   color: #eaebef;
@@ -169,10 +203,24 @@ body {
   font-size: 1.375rem;
   letter-spacing: 1px;
 }
+@media (max-width: 640px) {
+  .landing-hero-subtitle {
+    font-size: 0.9375rem;
+    margin-top: 1.875rem;
+  }
+}
 
 .landing-whatwedo {
+  position: relative;
   max-width: 68.75rem;
   margin: 5.625rem auto 0;
+}
+@media (max-width: 640px) {
+  .landing-whatwedo {
+    min-height: 25rem;
+    margin-top: 0;
+    padding-top: 3.75rem;
+  }
 }
 
 .landing-whatwedo-bullets {
@@ -180,18 +228,92 @@ body {
   margin: 0;
   padding: 0;
 }
+@media (max-width: 640px) {
+  .landing-whatwedo-bullets {
+    position: absolute;
+    top: 2.5rem;
+    width: 100%;
+  }
+}
 .landing-whatwedo-bullets li {
   float: left;
   width: 25%;
+}
+@media (max-width: 640px) {
+  .landing-whatwedo-bullets li {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    float: none;
+    width: 80%;
+    display: none;
+  }
+  .landing-whatwedo-bullets li.-active {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .landing-whatwedo-card {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    height: 75%;
+    border: 1px solid #ededed;
+    box-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+    border-radius: 0.1875rem;
+  }
+}
+
+.landing-whatwedo-control {
+  position: absolute;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.landing-whatwedo-control.-next {
+  right: 0;
+  top: 2.5rem;
+}
+.landing-whatwedo-control.-previous {
+  left: 0;
+  top: 2.5rem;
 }
 
 .landing-whatwedo-item {
   text-align: center;
   margin: 0 1.125rem;
 }
+@media (max-width: 640px) {
+  .landing-whatwedo-item {
+    position: relative;
+    font-size: 0.875rem;
+    line-height: 1.2;
+    border: 1px solid #ededed;
+    box-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+    border-radius: 0.1875rem;
+    padding: 1.75rem 0.625rem;
+    margin: 0;
+    z-index: 100;
+    background-color: white;
+    display: block;
+    margin: 0 auto;
+    width: 76%;
+  }
+}
 .landing-whatwedo-item h2 {
   text-transform: uppercase;
   font-size: 1.25rem;
+}
+@media (max-width: 640px) {
+  .landing-whatwedo-item h2 {
+    font-size: 1rem;
+  }
 }
 .landing-whatwedo-item a {
   transition: color 0.125s;
