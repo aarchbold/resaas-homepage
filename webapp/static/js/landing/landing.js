@@ -38,7 +38,6 @@ $.fn.selectTestimonial = function() {
                 goToTestimonial(currentIndex);
             }
         }
-        console.log(currentIndex);
         timer = window.setTimeout(goToNext,
             interval
         );
@@ -75,7 +74,7 @@ $.fn.showFeature = function() {
     var $featureLinks = $('.landing-feature-link', $('.landing-whatwedo-bullets')),
         $context = $('.section-features'),
         $navItems = $('.landing-features-nav li', $context),
-        $images = $('.landing-features-screenshot', $context),
+        $images = $('.landing-features-image', $context),
         $features = $('.landing-features-bullets', $context);
 
     console.log($featureLinks);
@@ -121,7 +120,56 @@ $.fn.showFeature = function() {
 
 };
 
+/**
+ * Cycles features slideshow-esque
+ */
+$.fn.landingSlideShow = function() {
+    var $context = $(this),
+        $slides = $('.landing-whatwedo-bullets li', $context),
+        $next = $('.-next', $context),
+        $prev = $('.-previous', $context),
+        currentIndex = 0;
+        console.log($slides);
+        console.log($next);
+        console.log($prev);
+
+        function goToSlide(direction) {
+            // reset slides
+            $slides.removeClass('-active');
+
+            if (direction === 'forward') {
+                if (currentIndex === 3) {
+                    currentIndex = 0;
+                } else {
+                    currentIndex++;
+                }
+                console.log(currentIndex);
+                $slides.eq(currentIndex).addClass('-active');
+            } else {
+                if (currentIndex === 0) {
+                    currentIndex = 3;
+                } else {
+                    currentIndex--;
+                }
+                console.log(currentIndex);
+                $slides.eq(currentIndex).addClass('-active');
+            }
+        }
+
+        $next.click(function(e) {
+            e.preventDefault();
+            goToSlide('forward');
+        });
+
+        $prev.click(function(e) {
+            e.preventDefault();
+            goToSlide('back');
+        });
+
+};
+
 $(document).ready(function() {
     $('.section-testimonials').selectTestimonial();
     $('body').showFeature();
+    $('.landing-whatwedo').landingSlideShow();
 });

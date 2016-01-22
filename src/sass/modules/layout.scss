@@ -168,15 +168,24 @@ body {
 
 .landing-whatwedo-control {
     position: absolute;
+    top: rem(160px);
+    transition: color 0.125s;
     font-size: rem(20px);
     font-weight: 600;
+    text-decoration: none;
+    color: $color-teal;
+    display: none !important;
+    @media (max-width: $breakpoint-phablet) {
+        display: block !important;
+    }
+    &:hover {
+        color: $color-deep-purple;
+    }
     &.-next {
-        right: 0;
-        top: rem(40px);
+        right: rem(-10px);
     }
     &.-previous {
-        left: 0;
-        top: rem(40px);
+        left: rem(-10px);
     }
 }
 
@@ -234,12 +243,22 @@ body {
         float: left;
         border: 3px solid $color-white;
         border-left: none;
+        @media (max-width: $breakpoint-phablet) {
+            border: 1px solid $color-white;
+        }
         &:first-child {
             border-left: 3px solid $color-white;
             border-radius: rem(25px) 0 0 rem(25px);
+            @media (max-width: $breakpoint-phablet) {
+                border-left: 1px solid $color-white;
+                border-radius: rem(10px) 0 0 rem(10px);
+            }
         }
         &:last-child {
             border-radius: 0 rem(25px) rem(25px) 0;
+            @media (max-width: $breakpoint-phablet) {
+                border-radius: 0 rem(10px) rem(10px) 0;
+            }
         }
         &:hover, &.-active {
             background-color: $color-white;
@@ -255,6 +274,10 @@ body {
             text-decoration: none;
             display: block;
             padding: rem(12px) rem(35px);
+            @media (max-width: $breakpoint-phablet) {
+                font-size: rem(11px);
+                padding: rem(5px) rem(6px);
+            }
         }
     }
 }
@@ -266,18 +289,23 @@ body {
     max-width: rem(836px);
     max-height: rem(614px);
     margin: 0 auto;
-    height: rem(614px);
     img {
         position: absolute;
         transition: opacity 0.05s, top 0.150s;
         display: block;
         opacity: 0;
         top: rem(80px);
+        width: 100%;
         &.-active {
             display: block;
             opacity: 1;
             top: 0;
         }
+    }
+    .landing-features-shim {
+        position: relative;
+        width: 100%;
+        top: 0;
     }
 }
 
@@ -301,6 +329,10 @@ body {
     li {
         float: left;
         width: 33.3%;
+        @media (max-width: $breakpoint-phablet) {
+            float: none;
+            width: 100%;
+        }
     }
 }
 
@@ -311,12 +343,25 @@ body {
         text-transform: uppercase;
         font-size: rem(20px);
         margin-bottom: rem(40px);
+        @media (max-width: $breakpoint-phablet) {
+            font-size: rem(16px);
+            margin-bottom: rem(16px);
+        }
+    }
+    p {
+        @media (max-width: $breakpoint-phablet) {
+            font-size: rem(12px);
+            margin-bottom: rem(40px);
+        }
     }
 }
 
 .landing-features-cta {
     text-align: center;
     margin-top: rem(75px);
+    @media (max-width: $breakpoint-phablet) {
+        margin-top: rem(10px);
+    }
 }
 
 // landing integrate
