@@ -12,9 +12,6 @@ $.fn.selectTestimonial = function() {
         interval = 5000,
         timer;
 
-    console.log($next);
-    console.log($prev);
-
     function goToTestimonial(index) {
         $thumbs.removeClass('-active');
         $quotes.removeClass('-active');
@@ -27,9 +24,8 @@ $.fn.selectTestimonial = function() {
     }
 
     function goToNext(index, direction) {
-        //window.clearTimeout(timer);
+        window.clearTimeout(timer);
         if (direction && direction === 'previous') {
-            //alert(index);
             if (index === 0) {
                 currentIndex = 3;
             } else {
@@ -60,9 +56,9 @@ $.fn.selectTestimonial = function() {
                 }
             }
         }
-        // timer = window.setTimeout(goToNext,
-        //     interval
-        // );
+        timer = window.setTimeout(goToNext,
+            interval
+        );
     }
 
     $thumbs.click(function(e) {
@@ -91,28 +87,24 @@ $.fn.selectTestimonial = function() {
         goToNext(currentIndex, 'next');
     });
 
-    // setTimeout(
-    //     function() {
-    //         goToNext();
-    //     }, interval
-    // );
+    setTimeout(
+        function() {
+            goToNext();
+        }, interval
+    );
 };
 
 /**
  * Selects a feature and updates the DOM with proper content
  */
 $.fn.showFeature = function() {
-    console.log('initializing features');
     var $featureLinks = $('.landing-feature-link', $('.landing-whatwedo-bullets')),
         $context = $('.section-features'),
         $navItems = $('.landing-features-nav li', $context),
         $images = $('.landing-features-image', $context),
         $features = $('.landing-features-bullets', $context);
 
-    console.log($featureLinks);
-
     function showFeature(feature) {
-        console.log(feature);
         $navItems.removeClass('-active');
         $images.removeClass('-active');
         $features.removeClass('-active');
@@ -161,9 +153,6 @@ $.fn.landingSlideShow = function() {
         $next = $('.-next', $context),
         $prev = $('.-previous', $context),
         currentIndex = 0;
-        console.log($slides);
-        console.log($next);
-        console.log($prev);
 
         function goToSlide(direction) {
             // reset slides
@@ -175,7 +164,6 @@ $.fn.landingSlideShow = function() {
                 } else {
                     currentIndex++;
                 }
-                console.log(currentIndex);
                 $slides.eq(currentIndex).addClass('-active');
             } else {
                 if (currentIndex === 0) {
@@ -183,7 +171,6 @@ $.fn.landingSlideShow = function() {
                 } else {
                     currentIndex--;
                 }
-                console.log(currentIndex);
                 $slides.eq(currentIndex).addClass('-active');
             }
         }
