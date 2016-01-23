@@ -102,7 +102,11 @@ $.fn.showFeature = function() {
         $context = $('.section-features'),
         $navItems = $('.landing-features-nav li', $context),
         $images = $('.landing-features-image', $context),
-        $features = $('.landing-features-bullets', $context);
+        $features = $('.landing-features-bullets', $context),
+        $mobileNav = $('.landing-features-mobile-nav__current', $context),
+        $mobileNavContents = $('.landing-features-mobile-nav__options', $context),
+        $mobileNameOptions = $('li a', $mobileNavContents),
+        $mobileChev = $('.landing-features-mobile-nav__current .fa-chevron-down', $context);
 
     function showFeature(feature) {
         $navItems.removeClass('-active');
@@ -113,24 +117,30 @@ $.fn.showFeature = function() {
             $('.feature-nav-agents', $context).addClass('-active');
             $('.feature-image-agents', $context).addClass('-active');
             $('.feature-content-agents', $context).addClass('-active');
+            $('span', $mobileNav).html('Agents');
         } else if (feature === '#brokers') {
             $('.feature-nav-brokers', $context).addClass('-active');
             $('.feature-image-brokers', $context).addClass('-active');
             $('.feature-content-brokers', $context).addClass('-active');
+            $('span', $mobileNav).html('Brokers');
         } else if (feature === '#franchises') {
             $('.feature-nav-franchises', $context).addClass('-active');
             $('.feature-image-franchises', $context).addClass('-active');
             $('.feature-content-franchises', $context).addClass('-active');
+            $('span', $mobileNav).html('Franchises');
         } else if (feature === '#mlss') {
             $('.feature-nav-mlss', $context).addClass('-active');
             $('.feature-image-mlss', $context).addClass('-active');
             $('.feature-content-mlss', $context).addClass('-active');
+            $('span', $mobileNav).html('MLSs');
         }
     }
 
     $featureLinks.click(function(e) {
         e.preventDefault();
         $navItems.removeClass('-active');
+        $('li', $mobileNavContents).removeClass('-selected');
+        $('li a[href="' + $(this).attr('href') + '"]', $mobileNavContents).parent().addClass('-selected');
 
         $('html, body').animate({
             scrollTop: $context.offset().top + 80
@@ -140,6 +150,23 @@ $.fn.showFeature = function() {
     $navItems.click(function(e) {
         e.preventDefault();
         showFeature($('a', $(this)).attr('href'))
+    });
+
+    $mobileNav.click(function(e) {
+        e.preventDefault();
+        $mobileNavContents.toggle();
+        $mobileChev.toggleClass('fa-chevron-up');
+        $mobileChev.toggleClass('fa-chevron-down');
+    });
+
+    $mobileNameOptions.click(function(e) {
+        e.preventDefault();
+        $mobileChev.toggleClass('fa-chevron-up');
+        $mobileChev.toggleClass('fa-chevron-down');
+        $mobileNavContents.toggle();
+        $('li', $mobileNavContents).removeClass('-selected');
+        $(this).parent().addClass('-selected');
+        showFeature($(this).attr('href'));
     });
 
 };
