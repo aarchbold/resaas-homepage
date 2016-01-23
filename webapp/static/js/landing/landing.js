@@ -6,9 +6,14 @@ $.fn.selectTestimonial = function() {
     var $context = this,
         $quotes = $('.landing-testimonial-text', $context),
         $thumbs = $('.landing-testimonials li', $context),
+        $next = $('.-next', $context),
+        $prev = $('.-previous', $context),
         currentIndex = 0,
         interval = 5000,
         timer;
+
+    console.log($next);
+    console.log($prev);
 
     function goToTestimonial(index) {
         $thumbs.removeClass('-active');
@@ -21,26 +26,43 @@ $.fn.selectTestimonial = function() {
         },250);
     }
 
-    function goToNext(index) {
-        window.clearTimeout(timer);
-        if (index && index === 'start') {
-            currentIndex = 0;
+    function goToNext(index, direction) {
+        //window.clearTimeout(timer);
+        if (direction && direction === 'previous') {
+            //alert(index);
+            if (index === 0) {
+                currentIndex = 3;
+            } else {
+                currentIndex--;
+            }
             goToTestimonial(currentIndex);
-        } else if (index && index !== 'start') {
-            currentIndex = index;
-            goToTestimonial(currentIndex);
-        } else {
-            if (currentIndex === 3) {
+        } else if (direction && direction === 'next') {
+            if (index === 3) {
                 currentIndex = 0;
-                goToTestimonial(currentIndex);
             } else {
                 currentIndex++;
+            }
+            goToTestimonial(currentIndex);
+        } else {
+            if (index && index === 'start') {
+                currentIndex = 0;
                 goToTestimonial(currentIndex);
+            } else if (index && index !== 'start') {
+                currentIndex = index;
+                goToTestimonial(currentIndex);
+            } else {
+                if (currentIndex === 3) {
+                    currentIndex = 0;
+                    goToTestimonial(currentIndex);
+                } else {
+                    currentIndex++;
+                    goToTestimonial(currentIndex);
+                }
             }
         }
-        timer = window.setTimeout(goToNext,
-            interval
-        );
+        // timer = window.setTimeout(goToNext,
+        //     interval
+        // );
     }
 
     $thumbs.click(function(e) {
@@ -52,18 +74,28 @@ $.fn.selectTestimonial = function() {
 
         currentIndex = $thumbs.index($(this));
         if (currentIndex === 0) {
-            goToNext('start');
+            goToNext('start', false);
         } else {
-            goToNext(currentIndex);
+            goToNext(currentIndex, false);
         }
 
     });
 
-    setTimeout(
-        function() {
-            goToNext();
-        }, interval
-    );
+    $prev.click(function(e) {
+        e.preventDefault();
+        goToNext(currentIndex, 'previous');
+    });
+
+    $next.click(function(e) {
+        e.preventDefault();
+        goToNext(currentIndex, 'next');
+    });
+
+    // setTimeout(
+    //     function() {
+    //         goToNext();
+    //     }, interval
+    // );
 };
 
 /**
