@@ -54,7 +54,7 @@ body {
     padding: rem(100px) rem(20px);
     margin: 0 auto;
     @media (max-width: $breakpoint-phablet) {
-        padding: rem(30px) rem(20px);
+        padding: rem(40px) rem(20px) rem(60px);
     }
 }
 
@@ -366,13 +366,13 @@ body {
         font-size: rem(20px);
         margin-bottom: rem(40px);
         @media (max-width: $breakpoint-phablet) {
-            font-size: rem(16px);
+            font-size: rem(18px);
             margin-bottom: rem(16px);
         }
     }
     p {
         @media (max-width: $breakpoint-phablet) {
-            font-size: rem(12px);
+            font-size: rem(15px);
             margin-bottom: rem(40px);
         }
     }
@@ -382,7 +382,7 @@ body {
     text-align: center;
     margin-top: rem(75px);
     @media (max-width: $breakpoint-phablet) {
-        margin-top: rem(10px);
+        margin-top: rem(30px);
     }
 }
 

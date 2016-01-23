@@ -77,6 +77,14 @@ $.fn.selectTestimonial = function() {
 
     });
 
+    $context.on('swipeleft',function(){
+        goToNext(currentIndex, 'next');
+    }); 
+
+    $context.on('swiperight',function(){
+        goToNext(currentIndex, 'previous');
+    });  
+
     $prev.click(function(e) {
         e.preventDefault();
         goToNext(currentIndex, 'previous');
@@ -201,6 +209,15 @@ $.fn.landingSlideShow = function() {
                 $slides.eq(currentIndex).addClass('-active');
             }
         }
+
+
+        $context.on('swipeleft',function(){
+            goToSlide('forward');
+        }); 
+
+        $context.on('swiperight',function(){
+            goToSlide('back');
+        });  
 
         $next.click(function(e) {
             e.preventDefault();

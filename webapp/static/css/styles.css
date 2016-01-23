@@ -143,7 +143,7 @@ body {
 }
 @media (max-width: 640px) {
   .section-wrap {
-    padding: 1.875rem 1.25rem;
+    padding: 2.5rem 1.25rem 3.75rem;
   }
 }
 
@@ -489,13 +489,13 @@ body {
 }
 @media (max-width: 640px) {
   .landing-features-item h2 {
-    font-size: 1rem;
+    font-size: 1.125rem;
     margin-bottom: 1rem;
   }
 }
 @media (max-width: 640px) {
   .landing-features-item p {
-    font-size: 0.75rem;
+    font-size: 0.9375rem;
     margin-bottom: 2.5rem;
   }
 }
@@ -506,7 +506,7 @@ body {
 }
 @media (max-width: 640px) {
   .landing-features-cta {
-    margin-top: 0.625rem;
+    margin-top: 1.875rem;
   }
 }
 
