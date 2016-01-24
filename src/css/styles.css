@@ -98,10 +98,19 @@ body {
 .landing-page-header {
   position: absolute;
   margin-top: 2rem;
+  overflow-x: hidden;
 }
 @media (max-width: 765px) {
   .landing-page-header {
     margin-top: 0;
+  }
+}
+.landing-page-header.-open-nav {
+  overflow-x: initial;
+}
+@media (min-width: 765px) {
+  .landing-page-header.-open-nav {
+    overflow-x: hidden;
   }
 }
 

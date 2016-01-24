@@ -240,6 +240,7 @@ $(document).ready(function() {
     $('.re-nav-control-link', $('header')).click(function(e) {
         e.preventDefault();
         console.log($('html'));
+        $('.landing-page-header').toggleClass('-open-nav');
         $('html').toggleClass('-open-nav');
     });
 });
