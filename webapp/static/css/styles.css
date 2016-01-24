@@ -87,6 +87,25 @@
   box-shadow: 0.3125rem 1.25rem 3.125rem rgba(0, 0, 0, 0.5);
 }
 
+html {
+  transition: all 0.5s;
+  overflow-x: hidden;
+}
+html.-open-nav {
+  -webkit-transform: translateX(-250px);
+  -ms-transform: translateX(-250px);
+  transform: translateX(-250px);
+  position: fixed;
+}
+@media (min-width: 765px) {
+  html.-open-nav {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+    position: relative;
+  }
+}
+
 body {
   font-family: 'Open Sans',serif;
   color: #464646;
@@ -105,7 +124,6 @@ body {
 @media (max-width: 765px) {
   .landing-page-header {
     margin-top: 0;
-    overflow-x: hidden;
   }
 }
 

@@ -235,4 +235,11 @@ $(document).ready(function() {
     $('.section-testimonials').selectTestimonial();
     $('body').showFeature();
     $('.landing-whatwedo').landingSlideShow();
+
+    // mobile top nav toggle
+    $('.re-nav-control-link', $('header')).click(function(e) {
+        e.preventDefault();
+        console.log($('html'));
+        $('html').toggleClass('-open-nav');
+    });
 });
