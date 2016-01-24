@@ -18,6 +18,7 @@ body {
     margin-top: rem(32px);
     @media (max-width: $breakpoint-nav) {
         margin-top: 0;
+        overflow-x: hidden;
     }
 }
 
