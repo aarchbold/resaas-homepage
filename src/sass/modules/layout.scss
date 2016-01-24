@@ -4,11 +4,21 @@ body {
     font-family: 'Open Sans',serif;
     color: $color-grey;
     font-size: rem(16px);
-    background-color: white;
+    // background-color: white;
 }
 
 .wrap-container {
     width: 100%;
+    background-color: white;
+}
+
+// nav overrides for homepage
+.landing-page-header {
+    position: absolute;
+    margin-top: rem(32px);
+    @media (max-width: $breakpoint-nav) {
+        margin-top: 0;
+    }
 }
 
 .section-hero {
