@@ -228,7 +228,7 @@ body {
 }
 @media (max-width: 640px) {
   .landing-whatwedo {
-    min-height: 25rem;
+    min-height: 20.625rem;
     margin-top: 0;
     padding-top: 3.75rem;
   }
@@ -434,16 +434,20 @@ body {
 }
 .landing-features-screenshot img {
   position: absolute;
-  transition: opacity 0.05s, top 0.150s;
+  transition: all 0.150s;
   display: block;
   opacity: 0;
-  top: 5rem;
+  -webkit-transform: translateY(80px);
+  -ms-transform: translateY(80px);
+  transform: translateY(80px);
   width: 100%;
 }
 .landing-features-screenshot img.-active {
   display: block;
   opacity: 1;
-  top: 0;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 .landing-features-screenshot .landing-features-shim {
   position: relative;

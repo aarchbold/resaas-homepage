@@ -129,7 +129,7 @@ body {
     max-width: rem(1100px);
     margin: rem(90px) auto 0;
     @media (max-width: $breakpoint-phablet) {
-        min-height: rem(400px);
+        min-height: rem(330px);
         margin-top: 0;
         padding-top: rem(60px);
     }
@@ -313,15 +313,16 @@ body {
     margin: 0 auto;
     img {
         position: absolute;
-        transition: opacity 0.05s, top 0.150s;
+        transition: all 0.150s;
         display: block;
         opacity: 0;
-        top: rem(80px);
+        //top: rem(80px);
+        transform: translateY(80px);
         width: 100%;
         &.-active {
             display: block;
             opacity: 1;
-            top: 0;
+            transform: translateY(0);
         }
     }
     .landing-features-shim {

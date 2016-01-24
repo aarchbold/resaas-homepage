@@ -65,7 +65,7 @@ $.fn.selectTestimonial = function() {
         e.preventDefault();
 
         $('html, body').animate({
-            scrollTop: $context.offset().top
+            scrollTop: $('.section-subtitle', $context).offset().top - 40
         }, 200);
 
         currentIndex = $thumbs.index($(this));
