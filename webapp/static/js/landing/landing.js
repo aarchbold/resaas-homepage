@@ -240,7 +240,16 @@ $(document).ready(function() {
     $('.re-nav-control-link', $('header')).click(function(e) {
         e.preventDefault();
         console.log($('html'));
-        $('.landing-page-header').toggleClass('-open-nav');
+        if ($('.landing-page-header').hasClass('-open-nav')) {
+            setTimeout(
+                function() {
+                    $('.landing-page-header').removeClass('-open-nav');
+                }, 500
+            );
+        } else {
+            $('.landing-page-header').addClass('-open-nav');
+        }
         $('html').toggleClass('-open-nav');
     });
+
 });

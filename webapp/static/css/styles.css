@@ -89,7 +89,6 @@
 
 html {
   transition: all 0.5s;
-  overflow-x: hidden;
 }
 html.-open-nav {
   -webkit-transform: translateX(-250px);
@@ -117,6 +116,9 @@ body {
   background-color: white;
 }
 
+/***
+// nav overrides for homepage
+***/
 .landing-page-header {
   position: absolute;
   margin-top: 2rem;
@@ -136,6 +138,9 @@ body {
   }
 }
 
+/***
+// section styles
+***/
 .section-hero {
   height: 45.125rem;
   background: url(../images/backgrounds/bg-hero.jpg) 50% 50% no-repeat;
@@ -229,6 +234,9 @@ body {
   font-weight: 600;
 }
 
+/***
+// hero section
+***/
 .landing-header {
   position: absolute;
   top: 0;
@@ -259,6 +267,9 @@ body {
   }
 }
 
+/***
+// what we do section
+***/
 .landing-whatwedo {
   position: relative;
   max-width: 68.75rem;
@@ -345,6 +356,9 @@ body {
   left: -0.625rem;
 }
 
+/***
+// Testimonials section
+***/
 .landing-testimonials-control {
   top: 8.125rem;
 }
@@ -398,6 +412,9 @@ body {
   margin-bottom: 0.625rem;
 }
 
+/***
+// features section
+***/
 .landing-features-nav-container {
   text-align: center;
 }
@@ -552,6 +569,9 @@ body {
   }
 }
 
+/***
+// Integrations section
+***/
 .landing-integrate {
   text-align: center;
 }
@@ -562,9 +582,9 @@ body {
   margin: 0;
   padding: 0;
 }
-@media (max-width: 640px) {
+@media (max-width: 778px) {
   .landing-integrate-bullets {
-    width: 100%;
+    width: 13.75rem;
   }
 }
 .landing-integrate-bullets li {
@@ -573,46 +593,60 @@ body {
   float: left;
   height: 5.9375rem;
   background: url(../images/sprites/sprite-integrate.png) 0 0 no-repeat;
+  margin: 0 1.625rem;
+}
+@media (max-width: 992px) {
+  .landing-integrate-bullets li {
+    margin: 0;
+  }
+}
+@media (max-width: 778px) {
+  .landing-integrate-bullets li {
+    float: none;
+    width: 100%;
+  }
 }
 .landing-integrate-bullets li:hover {
   opacity: 1;
 }
 .landing-integrate-bullets li.landing-bullet-clareity {
-  width: 13.1875rem;
+  width: 7.5rem;
+  background-position: -3rem 0rem;
 }
-@media (max-width: 640px) {
+@media (max-width: 778px) {
   .landing-integrate-bullets li.landing-bullet-clareity {
-    width: 50%;
-    background-position: -0.3125rem 0rem;
+    width: 100%;
+    background-position: 0.625rem 0rem;
   }
 }
 .landing-integrate-bullets li.landing-bullet-rapattoni {
-  width: 15.5625rem;
-  background-position: -13.1875rem 0rem;
+  width: 11.25rem;
+  background-position: -15rem 0rem;
 }
-@media (max-width: 640px) {
+@media (max-width: 778px) {
   .landing-integrate-bullets li.landing-bullet-rapattoni {
-    width: 50%;
-    background-position: -13.9375rem 0rem;
+    width: 100%;
+    background-position: -13.625rem 0rem;
   }
 }
 .landing-integrate-bullets li.landing-bullet-agentachieve {
-  width: 17.6875rem;
-  background-position: -28.75rem 0rem;
+  width: 13.75rem;
+  background-position: -29.625rem 0rem;
 }
-@media (max-width: 640px) {
+@media (max-width: 778px) {
   .landing-integrate-bullets li.landing-bullet-agentachieve {
-    width: 50%;
+    width: 100%;
     background-position: -30.25rem 0rem;
   }
 }
 .landing-integrate-bullets li.landing-bullet-matterport {
-  width: 15.75rem;
+  width: 12.5rem;
   background-position: -46.4375rem 0rem;
 }
-@media (max-width: 640px) {
+@media (max-width: 778px) {
   .landing-integrate-bullets li.landing-bullet-matterport {
-    width: 50%;
+    width: 100%;
+    background-position: -46.75rem 0rem;
   }
 }
 .landing-integrate-bullets li a {
@@ -622,6 +656,9 @@ body {
   text-indent: -9999px;
 }
 
+/***
+// Testimonials section
+***/
 .landing-testimonials-container {
   position: relative;
 }
@@ -743,6 +780,9 @@ body {
   display: block;
 }
 
+/***
+// mobile nav tweaks
+***/
 .landing-features-mobile-nav-container {
   position: relative;
   display: none;
