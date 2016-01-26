@@ -100,7 +100,7 @@ body {
 .landing-page-header {
   position: absolute;
   margin-top: 2rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 @media (max-width: 765px) {
   .landing-page-header {
@@ -108,11 +108,11 @@ body {
   }
 }
 .landing-page-header.-open-nav {
-  overflow-x: initial;
+  overflow: initial;
 }
 @media (min-width: 765px) {
   .landing-page-header.-open-nav {
-    overflow-x: hidden;
+    overflow: hidden;
   }
 }
 
