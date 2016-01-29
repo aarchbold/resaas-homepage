@@ -24,7 +24,7 @@ $.fn.selectTestimonial = function() {
     }
 
     function goToNext(index, direction) {
-        window.clearTimeout(timer);
+        // window.clearTimeout(timer);
         if (direction && direction === 'previous') {
             if (index === 0) {
                 currentIndex = 3;
@@ -56,16 +56,16 @@ $.fn.selectTestimonial = function() {
                 }
             }
         }
-        timer = window.setTimeout(goToNext,
-            interval
-        );
+        // timer = window.setTimeout(goToNext,
+        //     interval
+        // );
     }
 
     $thumbs.click(function(e) {
         e.preventDefault();
 
         $('html, body').animate({
-            scrollTop: $('.section-subtitle', $context).offset().top - 40
+            scrollTop: $($context).offset().top - 40
         }, 200);
 
         currentIndex = $thumbs.index($(this));
@@ -95,11 +95,11 @@ $.fn.selectTestimonial = function() {
         goToNext(currentIndex, 'next');
     });
 
-    setTimeout(
-        function() {
-            goToNext();
-        }, interval
-    );
+    // setTimeout(
+    //     function() {
+    //         goToNext();
+    //     }, interval
+    // );
 };
 
 /**

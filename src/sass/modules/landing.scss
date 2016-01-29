@@ -42,10 +42,10 @@
 .section-wrap {
     max-width: rem(1360px);
     text-align: center;
-    padding: rem(100px) rem(20px);
+    padding: rem(40px) rem(20px) rem(60px) rem(20px);
     margin: 0 auto;
     @media (max-width: $breakpoint-phablet) {
-        padding: rem(40px) rem(20px) rem(60px);
+        padding: rem(60px) rem(30px);
     }
 }
 
@@ -56,6 +56,7 @@
     @media (max-width: $breakpoint-phablet) {
         font-size: rem(18px);
         margin-bottom: rem(30px);
+        margin-top: 0;
     }
     img {
         @media (max-width: $breakpoint-phablet) {
@@ -98,9 +99,9 @@
 }
 
 .landing-hero-title {
-    color: $color-white;
+    color: white;
     font-size: rem(36px);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     @media (max-width: $breakpoint-phablet) {
         font-size: rem(25px);
     }
@@ -316,17 +317,27 @@
         opacity: 0;
         //top: rem(80px);
         transform: translateY(80px);
-        width: 100%;
+        width: 90%;
+        margin-left: 5%;
         &.-active {
             display: block;
             opacity: 1;
             transform: translateY(0);
         }
+        @media (max-width: $breakpoint-phablet) {
+            width: 100%;
+            margin-left: 0;
+        }
     }
     .landing-features-shim {
         position: relative;
-        width: 100%;
+        width: 90%;
+        margin-left: 5%;
         top: 0;
+        @media (max-width: $breakpoint-phablet) {
+            width: 100%;
+            margin-left: 0;
+        }
     }
 }
 
@@ -484,7 +495,7 @@
 
 .landing-testimonials {
     list-style: none;
-    margin: rem(120px) 0 0 0;
+    margin: rem(60px) 0 rem(50px) 0;
     padding: 0;
     @media (max-width: $breakpoint-phablet) {
         margin: rem(20px) 0 0 0;
@@ -547,9 +558,9 @@
 
 .landing-testimonial-text {
     display: none;
-    height: rem(50px);
+    height: rem(120px);
     font-size: rem(22px);
-    padding-top: rem(28px);
+    // padding-top: rem(28px);
     @media (max-width: $breakpoint-phablet) {
         font-size: rem(15px);
         line-height: 1.3;
