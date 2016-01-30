@@ -28,7 +28,8 @@ body {
 .landing-page-header {
     position: absolute;
     margin-top: rem(32px);
-    overflow: hidden;
+    //overflow: hidden;
+    z-index: 1000;
     @media (max-width: $breakpoint-nav) {
         margin-top: 0;
     }

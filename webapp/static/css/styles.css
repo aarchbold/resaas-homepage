@@ -123,7 +123,7 @@ body {
 .landing-page-header {
   position: absolute;
   margin-top: 2rem;
-  overflow: hidden;
+  z-index: 1000;
 }
 @media (max-width: 765px) {
   .landing-page-header {
@@ -857,4 +857,39 @@ body {
 }
 .landing-features-mobile-nav__options.-active {
   display: block;
+}
+
+/***
+// nav overrides
+***/
+.landing-page-header .re-nav-item {
+  margin: 0;
+}
+.landing-page-header .re-nav-item .re-nav-link {
+  cursor: pointer;
+}
+
+.landing-page-header .re-nav-flyout-link {
+  display: block;
+  font-size: 16px;
+  min-width: auto;
+  padding: 10px 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.landing-page-header .re-nav-flyout {
+  background-color: white;
+}
+
+.landing-page-header .re-nav-flyout-item {
+  border-bottom: none;
+}
+.landing-page-header .re-nav-flyout-item a {
+  color: #464646;
+}
+.landing-page-header .re-nav-flyout-item a:hover {
+  color: #9c9b9b;
 }

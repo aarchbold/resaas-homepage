@@ -115,6 +115,7 @@ $.fn.showFeature = function() {
         $mobileNavContents = $('.landing-features-mobile-nav__options', $context),
         $mobileNameOptions = $('li a', $mobileNavContents),
         $mobileChev = $('.landing-features-mobile-nav__current .fa-chevron-down', $context);
+        $topnavItems = $('.header-feature-item', $(this));
 
     function showFeature(feature) {
         $navItems.removeClass('-active');
@@ -151,14 +152,23 @@ $.fn.showFeature = function() {
         $('li a[href="' + $(this).attr('href') + '"]', $mobileNavContents).parent().addClass('-selected');
 
         $('html, body').animate({
-            scrollTop: $context.offset().top + 80
+            scrollTop: $context.offset().top + 30
         }, 200, showFeature($(this).attr('href')));
     });
 
     $navItems.click(function(e) {
         e.preventDefault();
-        showFeature($('a', $(this)).attr('href'))
+        showFeature($('a', $(this)).attr('href'));
     });
+
+    $topnavItems.click(function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $context.offset().top + 30
+        }, 200, showFeature($(this).attr('href')));
+    });
+
+    console.log($topnavItems);
 
     $mobileNav.click(function(e) {
         e.preventDefault();
