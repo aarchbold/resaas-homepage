@@ -168,8 +168,6 @@ $.fn.showFeature = function() {
         }, 200, showFeature($(this).attr('href')));
     });
 
-    console.log($topnavItems);
-
     $mobileNav.click(function(e) {
         e.preventDefault();
         $mobileNavContents.toggle();
@@ -188,6 +186,7 @@ $.fn.showFeature = function() {
     });
 
 };
+
 
 /**
  * Cycles features slideshow-esque
@@ -241,15 +240,31 @@ $.fn.landingSlideShow = function() {
 
 };
 
+/**
+ * Enables mobile nav menu interactions
+ */
+$.fn.mobileNav = function() {
+    var $context = $(this),
+        $navLinks = $('.re-nav-mobile-link', $context);
+
+    $navLinks.click(function(e) {
+        e.preventDefault();
+        $('.re-nav-flyout-list', $(this).parent()).toggleClass('-is-active');
+        $('i', $(this)).toggleClass('fa-chevron-down');
+        $('i', $(this)).toggleClass('fa-chevron-up');
+    });
+
+};
+
 $(document).ready(function() {
     $('.section-testimonials').selectTestimonial();
     $('body').showFeature();
     $('.landing-whatwedo').landingSlideShow();
+    $('.landing-page-header').mobileNav();
 
     // mobile top nav toggle
     $('.re-nav-control-link', $('header')).click(function(e) {
         e.preventDefault();
-        console.log($('html'));
         if ($('.landing-page-header').hasClass('-open-nav')) {
             setTimeout(
                 function() {

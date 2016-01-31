@@ -7,6 +7,29 @@
     .re-nav-link {
         cursor: pointer;
     }
+    .re-nav-mobile-link {
+        display: none;
+        position: absolute;
+        text-align: right;
+        top: 10px;
+        width: 100%;
+        padding: 8px 0px;
+        z-index: 1001;
+        @media (max-width: $breakpoint-nav) {
+            display: block;
+            .fa {
+                padding-right: 15px;
+                color: white;
+            }
+        }
+    }
+    @media (max-width: $breakpoint-nav) {
+        &:hover {
+            ul {
+                display: none;
+            }
+        }
+    }
 }
 
 .landing-page-header .re-nav-flyout-link {
@@ -28,8 +51,15 @@
     border-bottom: none;
     a {
         color: #464646;
+        transition: color 0.125s;
         &:hover {
-            color: #9c9b9b;
+            color: $color-teal;
         }
+    }
+}
+
+.landing-page-header .re-nav-flyout-list {
+    &.-is-active {
+        display: block !important;
     }
 }
