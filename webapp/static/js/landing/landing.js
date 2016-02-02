@@ -115,7 +115,8 @@ $.fn.showFeature = function() {
         $mobileNavContents = $('.landing-features-mobile-nav__options', $context),
         $mobileNameOptions = $('li a', $mobileNavContents),
         $mobileChev = $('.landing-features-mobile-nav__current .fa-chevron-down', $context);
-        $topnavItems = $('.header-feature-item', $(this));
+        $topnavItems = $('.header-feature-item', $(this)),
+        $landingPageHeader = $('.landing-page-header');
 
     function showFeature(feature) {
         $navItems.removeClass('-active');
@@ -163,9 +164,23 @@ $.fn.showFeature = function() {
 
     $topnavItems.click(function(e) {
         e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $context.offset().top + 30
-        }, 200, showFeature($(this).attr('href')));
+        var $link = $(this);
+        if ($landingPageHeader.hasClass('-open-nav')) {
+            $('html').toggleClass('-open-nav');
+            setTimeout(
+                function() {
+                    $('.landing-page-header').removeClass('-open-nav');
+                    console.log($(this));
+                    $('html, body').animate({
+                        scrollTop: $context.offset().top + 30
+                    }, 200, showFeature($link.attr('href')));
+                }, 500
+            );
+        } else {
+            $('html, body').animate({
+                scrollTop: $context.offset().top + 30
+            }, 200, showFeature($link.attr('href')));
+        }
     });
 
     $mobileNav.click(function(e) {
@@ -262,12 +277,8 @@ $.fn.mobileNav = function() {
             $('.re-nav-flyout-list', $(this).parent()).addClass('-is-active');
             $('i', $(this)).addClass('fa-angle-up');
             $('i', $(this)).removeClass('fa-angle-down');
-            // alert('huh?');
         }
-        //$flyouts.removeClass('-is-active');
-        //$('.re-nav-flyout-list', $(this).parent()).toggleClass('-is-active');
-        // $('i', $(this)).toggleClass('fa-chevron-down');
-        // $('i', $(this)).toggleClass('fa-chevron-up');
+
     });
 
 };
