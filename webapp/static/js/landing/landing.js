@@ -245,13 +245,29 @@ $.fn.landingSlideShow = function() {
  */
 $.fn.mobileNav = function() {
     var $context = $(this),
-        $navLinks = $('.re-nav-mobile-link', $context);
+        $navLinks = $('.re-nav-mobile-link', $context),
+        $flyouts = $('.re-nav-flyout-list', $context),
+        $chevrons = $('.re-nav-mobile-link i', $context);
 
     $navLinks.click(function(e) {
         e.preventDefault();
-        $('.re-nav-flyout-list', $(this).parent()).toggleClass('-is-active');
-        $('i', $(this)).toggleClass('fa-chevron-down');
-        $('i', $(this)).toggleClass('fa-chevron-up');
+        if ($('.re-nav-flyout-list', $(this).parent()).hasClass('-is-active')) {
+            $chevrons.removeClass('fa-angle-up');
+            $chevrons.addClass('fa-angle-down');
+            $flyouts.removeClass('-is-active');
+        } else {
+            $flyouts.removeClass('-is-active');
+            $chevrons.removeClass('fa-angle-up');
+            $chevrons.addClass('fa-angle-down');
+            $('.re-nav-flyout-list', $(this).parent()).addClass('-is-active');
+            $('i', $(this)).addClass('fa-angle-up');
+            $('i', $(this)).removeClass('fa-angle-down');
+            // alert('huh?');
+        }
+        //$flyouts.removeClass('-is-active');
+        //$('.re-nav-flyout-list', $(this).parent()).toggleClass('-is-active');
+        // $('i', $(this)).toggleClass('fa-chevron-down');
+        // $('i', $(this)).toggleClass('fa-chevron-up');
     });
 
 };
@@ -272,6 +288,9 @@ $(document).ready(function() {
                 }, 500
             );
         } else {
+            // set nav to the window height and allow scrolling
+            $('.re-nav', $('.landing-page-header')).height($(window).height());
+            $('.re-nav', $('.landing-page-header')).css({'overflow':'auto'});
             $('.landing-page-header').addClass('-open-nav');
         }
         $('html').toggleClass('-open-nav');

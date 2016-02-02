@@ -44,13 +44,13 @@
 }
 
 .landing-page-header .re-nav-flyout {
-    background-color: white;
+    background-color: #181e23;
 }
 
 .landing-page-header .re-nav-flyout-item {
     border-bottom: none;
     a {
-        color: #464646;
+        color: #e3e3e3;
         transition: color 0.125s;
         &:hover {
             color: $color-teal;
