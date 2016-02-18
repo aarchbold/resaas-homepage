@@ -1,4 +1,4 @@
-# claremont-rebuild
+# Resaas Homepage
 Home of the RESAAS homepage
 
 ## dependencies
