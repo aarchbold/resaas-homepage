@@ -1,0 +1,261 @@
+
+/***
+// section styles
+***/
+.section-hero-pricing {
+    padding: 0 rem(20px);
+    background-color: $color-deep-purple;
+    min-height: rem(890px);
+    padding: rem(150px) 0 rem(40px) 0;
+    @media (max-width: $breakpoint-tablet) {
+        // border: 1px solid blue;
+    }
+    @media (max-width: $breakpoint-phablet) {
+        font-size: rem(25px);
+    }
+}
+
+.section-hero-pricing-wrap {
+    position: relative;
+    max-width: rem(1280px);
+    text-align: center;
+    margin: 0 auto;
+    padding-top: rem(40px);
+}
+
+.pricing-hero-title {
+    color: white;
+    font-size: rem(36px);
+}
+
+
+/***
+// pricing tiles
+***/
+.pricing-packages-wrap {
+    padding-top: rem(50px);
+}
+
+.pricing-packages-item {
+    float: left;
+    width: 25%;
+}
+
+.pricing-packages-card {
+    position: relative;
+    background-color: $color-card-one;
+    min-height: rem(360px);
+    border-radius: rem(5px);
+    margin: 0 rem(10px);
+    padding: rem(15px);
+    text-align: center;
+    color: white;
+    font-size: rem(14px);
+    &.-one {
+        background-color: $color-card-one;
+    }
+    &.-two {
+        background-color: $color-card-two;
+    }
+    &.-three {
+        background-color: $color-card-three;
+    }
+    &.-four {
+        background-color: $color-card-four;
+    }
+    .btn-pricing-feature {
+        position: absolute;
+        bottom: rem(30px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    p {
+        min-height: rem(80px);
+        span {
+            display: block;
+            padding: rem(20px);
+        }
+        &.-quote {
+            min-height: rem(56px);
+        }
+    }
+}
+
+.pricing-packages-card__header {
+    text-shadow: $text-shadow-default;
+}
+
+.pricing-packages-card__price {
+    font-size: rem(72px);
+    line-height: 1;
+    font-weight: bold;
+    text-shadow: $text-shadow-default;
+    span {
+        font-size: rem(40px);
+        position: relative;
+        top: rem(-21px);
+        font-weight: normal;
+    }
+}
+
+.pricing-packages-card__quote {
+    font-size: rem(48px);
+    line-height: 1;
+    font-weight: bold;
+    text-shadow: $text-shadow-default;
+}
+
+.pricing-packages-card__details {
+    text-decoration: underline;
+    // padding-top: rem(40px);
+    display: inline-block;
+}
+
+/***
+// pricing package features lists
+***/
+
+.pricing-packages-features {
+    margin: 0 rem(10px);
+    text-align: left;
+    color: white;
+}
+
+.pricing-packages-header {
+    border-bottom: 1px solid white;
+    padding-top: rem(15px);
+    padding-bottom: rem(20px);
+    font-size: rem(16px);
+    strong {
+        font-size: rem(21px);
+        display: block;
+        span {
+            color: $color-card-one;
+        }
+    }
+}
+
+.pricing-packages-list {
+    margin: 0 0 0 rem(20px);
+    padding: 0;
+    line-height: 1.8;
+}
+
+/***
+// pricing package features
+***/
+
+.section-pricing-features {
+    background-color: $color-pricing-section;
+}
+
+.section-pricing-features__wrap {
+    max-width: rem(1000px);
+    text-align: center;
+    padding: rem(110px) rem(20px) rem(100px) rem(20px);
+    margin: 0 auto;
+    @media (max-width: $breakpoint-phablet) {
+        padding: rem(60px) rem(30px);
+    }
+}
+
+.section-pricing-features__header {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: rem(21px);
+}
+
+.section-pricing-bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @media (max-width: $breakpoint-phablet) {
+        position: absolute;
+        top: rem(40px);
+        width: 100%;
+    }
+    li {
+        float: left;
+        width: 50%;
+        @media (max-width: $breakpoint-phablet) {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            float: none;
+            width: 80%;
+            display: none;
+            &.-active {
+                display: block;
+            }
+        }
+    }
+}
+
+.section-pricing-features__card {
+    @media (max-width: $breakpoint-phablet) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 75%;
+        border: 1px solid $color-feature-border;
+        box-shadow: rem(0px) rem(2px) rem(4px) rgba(0, 0, 0, 0.5);
+        border-radius: rem(3px);
+    }
+}
+
+.section-pricing-features__item {
+    position: relative;
+    text-align: left;
+    margin: 0 rem(18px);
+    padding-left: rem(82px);
+    padding-right: rem(30px);
+    margin-left: rem(40px);
+    margin-bottom: rem(60px);
+    min-height: rem(70px);
+    @media (max-width: $breakpoint-phablet) {
+        position: relative;
+        font-size: rem(14px);
+        line-height: 1.2;
+        border: 1px solid $color-feature-border;
+        box-shadow: rem(0px) rem(2px) rem(4px) rgba(0, 0, 0, 0.5);
+        border-radius: rem(3px);
+        padding: rem(28px) rem(10px);
+        margin: 0;
+        z-index: 100;
+        background-color: white;
+        display: block;
+        margin: 0 auto;
+        width: 76%;
+    }
+    h2 {
+        font-size: rem(16px);
+        margin: 0;
+        padding: 0;
+        @media (max-width: $breakpoint-phablet) {
+            font-size: rem(16px);
+        }
+    }
+    p {
+        margin: 0;
+        padding: 0;
+        color: $color-grey-light;
+    }
+    a {
+        transition: color 0.125s;
+        text-transform: uppercase;
+        color: $color-teal;
+        text-decoration: none;
+        &:hover {
+            color: $color-deep-purple;
+        }
+    }
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
