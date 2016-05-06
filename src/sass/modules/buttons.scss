@@ -77,7 +77,7 @@
 
 .btn-pricing-premium {
     @extend %btn;
-    background-color: white;
+    background-color: transparent;
     color: $color-teal;
     border: 1px solid $color-teal;
     text-transform: none;
@@ -87,6 +87,20 @@
         background-color: $color-teal;
         color: white !important;
     }
+}
+
+.btn-pricing-management-tools {
+    @extend %btn;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    text-transform: none;
+    padding: rem(18px) 0;
+    min-width: rem(180px);
+    &:hover {
+        background-color: white;
+        color: $color-pricing-management-tools !important;
+    }  
 }
 
 .btn-drop-shadow {
