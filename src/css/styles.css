@@ -888,18 +888,13 @@ body {
   min-height: 55.625rem;
   padding: 9.375rem 0 2.5rem 0;
 }
-@media (max-width: 640px) {
-  .section-hero-pricing {
-    font-size: 1.5625rem;
-  }
-}
 
 .section-hero-pricing-wrap {
   position: relative;
   max-width: 80rem;
   text-align: center;
   margin: 0 auto;
-  padding-top: 2.5rem;
+  padding: 2.5rem 0.625rem;
 }
 
 .pricing-hero-title {
@@ -917,6 +912,18 @@ body {
 .pricing-packages-item {
   float: left;
   width: 25%;
+}
+@media (max-width: 1080px) {
+  .pricing-packages-item {
+    width: 50%;
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 640px) {
+  .pricing-packages-item {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 
 .pricing-packages-card {
@@ -958,9 +965,54 @@ body {
 .pricing-packages-card p.-quote {
   min-height: 3.5rem;
 }
+@media (max-width: 490px) {
+  .pricing-packages-card p {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .pricing-packages-card {
+    width: 43%;
+    float: left;
+  }
+}
+@media (max-width: 490px) {
+  .pricing-packages-card {
+    width: auto;
+    float: none;
+    border-radius: 0.3125rem 0.3125rem 0 0;
+    min-height: 11.0625rem;
+  }
+}
+
+.pricing-packages-mobile__chevron {
+  background-color: white;
+  height: 3rem;
+  border-radius: 0 0 0.3125rem 0.3125rem;
+  margin: 0 0.625rem;
+  display: none;
+  text-align: center;
+}
+@media (max-width: 490px) {
+  .pricing-packages-mobile__chevron {
+    display: block;
+  }
+}
+
+.pricing-packages-mobile__icon {
+  font-size: 1.75rem !important;
+  color: #464646;
+  padding-top: 0.5625rem;
+}
 
 .pricing-packages-card__header {
   text-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 490px) {
+  .pricing-packages-card__header {
+    font-size: 2.125rem;
+    margin: 0;
+  }
 }
 
 .pricing-packages-card__price {
@@ -975,6 +1027,16 @@ body {
   top: -1.3125rem;
   font-weight: normal;
 }
+@media (max-width: 490px) {
+  .pricing-packages-card__price span {
+    top: 0;
+  }
+}
+@media (max-width: 490px) {
+  .pricing-packages-card__price {
+    font-size: 2.125rem;
+  }
+}
 
 .pricing-packages-card__quote {
   font-size: 3rem;
@@ -982,10 +1044,20 @@ body {
   font-weight: bold;
   text-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 490px) {
+  .pricing-packages-card__quote {
+    font-size: 2.125rem;
+  }
+}
 
 .pricing-packages-card__details {
   text-decoration: underline;
   display: inline-block;
+}
+@media (max-width: 490px) {
+  .pricing-packages-card__details {
+    display: none;
+  }
 }
 
 /***
@@ -995,6 +1067,17 @@ body {
   margin: 0 0.625rem;
   text-align: left;
   color: white;
+}
+@media (max-width: 640px) {
+  .pricing-packages-features {
+    width: 42%;
+    float: left;
+  }
+}
+@media (max-width: 490px) {
+  .pricing-packages-features {
+    display: none;
+  }
 }
 
 .pricing-packages-header {
