@@ -221,7 +221,7 @@
     padding: rem(110px) rem(20px) rem(20px) rem(20px);
     margin: 0 auto;
     @media (max-width: $breakpoint-phablet) {
-        padding: rem(60px) rem(30px);
+        padding: rem(60px) rem(20px);
     }
 }
 
@@ -230,6 +230,17 @@
     padding: 0;
     text-transform: uppercase;
     font-size: rem(21px);
+}
+
+.pricing-basic-features {
+    position: relative;
+    max-width: rem(1100px);
+    margin: rem(90px) auto 0;
+    @media (max-width: $breakpoint-phablet) {
+        min-height: rem(200px);
+        margin-top: 0;
+        padding-top: rem(60px);
+    }
 }
 
 .section-pricing-bullets {
@@ -248,26 +259,47 @@
             &:nth-child(odd) {
                 margin-right: 16.65%;
                 margin-left: 0;
+                @media (max-width: $breakpoint-phablet) {
+                    margin-right: 0;
+                }
             }
+            @media (max-width: $breakpoint-phablet) {
+                margin-left: 0;
+            }
+        }
+        @media (max-width: $breakpoint-phablet) {
+            position: relative;
+            top: rem(40px);
+            width: 100%;
+            min-height: rem(240px);
         }
     }
     li {
         float: left;
         width: 50%;
+        @media (max-width: $breakpoint-big-tablet) {
+            width: auto;
+            max-width: rem(600px);
+            margin: 0 auto;
+            float: none;
+        }
         @media (max-width: $breakpoint-phablet) {
             position: absolute;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
             float: none;
-            width: 80%;
+            width: 100%;
             display: none;
             &.-active {
                 display: block;
             }
         }
         &.-premium {
-            width: 33.3%
+            width: 33.3%;
+            @media (max-width: $breakpoint-phablet) {
+                width: 100%;
+            }
         }
     }
 }
@@ -282,6 +314,7 @@
         border: 1px solid $color-feature-border;
         box-shadow: rem(0px) rem(2px) rem(4px) rgba(0, 0, 0, 0.5);
         border-radius: rem(3px);
+        background-color: white;
     }
 }
 
@@ -299,21 +332,26 @@
         padding-left: 0;
         margin-right: 2rem;
         padding-right: 0;
+        @media (max-width: $breakpoint-phablet) {
+            margin: 0 auto !important;
+            padding: rem(40px) rem(20px);
+        }
     }
     @media (max-width: $breakpoint-phablet) {
+        text-align: center;
         position: relative;
         font-size: rem(14px);
         line-height: 1.2;
         border: 1px solid $color-feature-border;
         box-shadow: rem(0px) rem(2px) rem(4px) rgba(0, 0, 0, 0.5);
         border-radius: rem(3px);
-        padding: rem(28px) rem(10px);
+        padding: rem(40px) rem(20px);
         margin: 0;
         z-index: 100;
         background-color: white;
         display: block;
         margin: 0 auto;
-        width: 76%;
+        width: 65%;
     }
     h2 {
         font-size: rem(16px);
@@ -341,6 +379,12 @@
         position: absolute;
         left: 0;
         top: 0;
+        @media (max-width: $breakpoint-phablet) {
+            position: relative;
+            left: auto;
+            top: auto;
+            margin-bottom: rem(20px);
+        }
     }
 }
 
@@ -367,9 +411,9 @@
     padding-top: 6rem;
     min-height: rem(550px);
     @media (max-width: $breakpoint-phablet) {
-        min-height: rem(330px);
+        min-height: rem(144px);
         margin-top: 0;
-        padding-top: rem(60px);
+        padding-top: rem(20px);
     }
 }
 
@@ -378,6 +422,11 @@
     left: 33%;
     top: 0;
     width: 33%;
+    @media (max-width: $breakpoint-phablet) {
+        position: relative;
+        left: 0;
+        width: 66%;
+    }
 }
 
 /***
