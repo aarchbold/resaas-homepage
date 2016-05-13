@@ -178,7 +178,7 @@ body {
     position: absolute;
     display: block !important;
     z-index: 1;
-    top: 52%;
+    top: 46%;
     font-size: 1.25rem !important;
   }
 }
@@ -187,6 +187,16 @@ body {
 }
 .carousel-control.-next {
   right: 0.3125rem;
+}
+
+@media (max-width: 640px) {
+  .resaas-carousel-container {
+    position: relative;
+    min-height: 17.5rem;
+  }
+  .resaas-carousel-container.-premium {
+    min-height: 14.375rem;
+  }
 }
 
 /***
@@ -1184,12 +1194,17 @@ body {
     margin-left: 0;
   }
 }
+@media (max-width: 1080px) {
+  .section-pricing-bullets.-premium li {
+    float: left;
+  }
+}
 @media (max-width: 640px) {
   .section-pricing-bullets.-premium {
     position: relative;
     top: 2.5rem;
     width: 100%;
-    min-height: 15rem;
+    min-height: 12.5rem;
   }
 }
 .section-pricing-bullets li {
@@ -1377,17 +1392,47 @@ body {
   max-width: 80rem;
   margin: 0 auto;
 }
+@media (max-width: 1080px) {
+  .section-pricing-management-tool__wrap {
+    text-align: center;
+  }
+}
 
 .pricing-management-tool__features {
   margin-left: 52%;
   width: 48%;
   padding-top: 8.75rem;
 }
+@media (max-width: 1080px) {
+  .pricing-management-tool__features {
+    padding: 2.5rem 0.625rem 0;
+    width: 100%;
+    max-width: 36.25rem;
+    margin-left: 0;
+    margin: 0 auto 4rem;
+    text-align: left;
+  }
+}
 
 .pricing-management-tool__image {
   position: absolute;
   bottom: -6.25rem;
   transform: translateX(-40px);
+}
+@media (max-width: 1200px) {
+  .pricing-management-tool__image {
+    width: 50%;
+  }
+}
+@media (max-width: 1080px) {
+  .pricing-management-tool__image {
+    position: relative;
+    bottom: auto;
+    transform: translateX(0);
+    max-width: 100%;
+    width: auto;
+    margin-top: 3rem;
+  }
 }
 
 .section-custom-solutions {
@@ -1428,6 +1473,11 @@ body {
   bottom: -6.25rem;
   right: 0;
   transform: translateX(-40px);
+}
+@media (max-width: 1200px) {
+  .custom-solutions__image {
+    width: 50%;
+  }
 }
 
 .custom-solutions__features {

@@ -52,7 +52,7 @@ body {
         position: absolute;
         display: block !important;
         z-index: 1;
-        top: 52%;
+        top: 46%;
         font-size: rem(20px) !important;
     }
     &.-previous {
@@ -60,6 +60,16 @@ body {
     }
     &.-next {
         right: rem(5px);
+    }
+}
+
+.resaas-carousel-container {
+    @media (max-width: $breakpoint-phablet) {
+        position: relative;
+        min-height: rem(280px);
+        &.-premium {
+            min-height: rem(230px);
+        }
     }
 }
 
