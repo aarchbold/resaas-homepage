@@ -8,7 +8,7 @@
     min-height: rem(890px);
     padding: rem(150px) 0 rem(40px) 0;
     @media (max-width: $breakpoint-tablet) {
-        // border: 1px solid blue;
+        padding-top: rem(50px);
     }
     @media (max-width: $breakpoint-phablet) {
         // font-size: rem(25px);
@@ -221,7 +221,7 @@
     padding: rem(110px) rem(20px) rem(20px) rem(20px);
     margin: 0 auto;
     @media (max-width: $breakpoint-phablet) {
-        padding: rem(60px) rem(20px);
+        padding: rem(40px) rem(20px);
     }
 }
 
@@ -235,11 +235,11 @@
 .pricing-basic-features {
     position: relative;
     max-width: rem(1100px);
-    margin: rem(90px) auto 0;
+    margin: rem(30px) auto 0;
     @media (max-width: $breakpoint-phablet) {
         min-height: rem(200px);
         margin-top: 0;
-        padding-top: rem(60px);
+        padding-top: rem(0px);
     }
 }
 
@@ -450,6 +450,9 @@
     @media (max-width: $breakpoint-big-tablet) {
         text-align: center;
     }
+    @media (max-width: $breakpoint-phablet) {
+        padding: 0 rem(25px);
+    }
 }
 
 .pricing-management-tool__features {
@@ -463,6 +466,11 @@
         margin-left: 0;
         margin: 0 auto 4rem;
         text-align: left;
+    }
+    @media (max-width: $breakpoint-phone) {
+        width: auto;
+        max-width: auto;
+        padding: rem(20px) 0 0;
     }
 }
 
@@ -496,6 +504,12 @@
     max-width: rem(1280px);
     margin: 0 auto;
     min-height: rem(590px);
+    @media (max-width: $breakpoint-big-tablet) {
+        text-align: center;
+    }
+    @media (max-width: $breakpoint-phablet) {
+        padding: 0 rem(25px);
+    }
 }
 
 .custom-solutions__header {
@@ -509,10 +523,17 @@
 .custom-solutions__list {
     margin: rem(40px) 0 rem(50px);
     padding-left: rem(20px);
+    @media (max-width: $breakpoint-phone) {
+        margin-top: rem(0px);
+    }
     li {
         line-height: 1.9;
         font-size: rem(16px);
         padding-left: rem(10px);
+        @media (max-width: $breakpoint-phone) {
+            line-height: 1.3;
+            margin-top: rem(20px);
+        }
     }
 }
 
@@ -524,10 +545,79 @@
     @media (max-width: 1200px) {
         width: 50%;
     }
+    @media (max-width: $breakpoint-big-tablet) {
+        position: relative;
+        bottom: auto;
+        transform: translateX(0);
+        max-width: 100%;
+        width: auto;
+        margin-top: 3rem;
+    }
 }
 
 .custom-solutions__features {
-    width: 48%;
+    width: 46%;
+    padding-left: rem(20px);
     padding-top: rem(140px);
+    @media (max-width: $breakpoint-big-tablet) {
+        padding: rem(40px) rem(10px) 0;
+        width: 100%;
+        max-width: rem(580px);
+        margin-left: 0;
+        margin: 0 auto 4rem;
+        text-align: left;
+    }
+    @media (max-width: $breakpoint-phone) {
+        width: auto;
+        max-width: auto;
+        padding: rem(20px) 0 0;
+    }
 }
 
+/***
+// pricing modal
+***/
+
+.pricing-upgrade-modal {
+    transition: opacity 0.250s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    &.-open {
+        opacity: 1;
+        .pricing-updade-modal__popup {
+            max-width: rem(480px);
+            min-height: rem(200px);
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+.pricing-updade-modal__popup {
+    transition: all 0.250s;
+    margin: 0 auto;
+    width: rem(1px);
+    height: rem(1px);
+    margin-top: rem(100px);
+}
+
+.pricing-updade-modal__annual, .pricing-updade-modal__monthly {
+    padding: rem(40px);
+    color: white;
+}
+
+.pricing-updade-modal__annual {
+    background-color: $color-card-one;
+    border-radius: rem(5px) rem(5px) 0 0;
+}
+
+.pricing-updade-modal__monthly {
+    background-color: $color-pricing-management-tools;
+    border-radius: 0 0 rem(5px) rem(5px);
+}
