@@ -73,6 +73,9 @@
         background-color: $color-white;
         color: $color-blue-grey;
     }
+    &:active {
+        top: auto;
+    }
 }
 
 .btn-pricing-premium {

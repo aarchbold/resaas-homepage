@@ -12,9 +12,6 @@ $.fn.pricingSlideShow = function() {
         $prev = $('.-previous', $context),
         currentIndex = 0;
 
-        console.log('hello?');
-        console.log($context);
-
         function goToSlide(direction) {
             // reset slides
             $slides.removeClass('-active');
@@ -57,8 +54,58 @@ $.fn.pricingSlideShow = function() {
 
 };
 
+/**
+ * Opens the upgrade modal
+ */
+$.fn.upgradeModal = function() {
+    var openBtn = $(this),
+        container = $('.pricing-upgrade-modal'),
+        modal = $('.pricing-updade-modal__popup', container),
+        closeBtn = $('.pricing-update-modal__close', container);
+
+    function closeModal() {
+        container.removeClass('-open');
+        container.hide();
+    }
+
+    openBtn.click(function(e) {
+        e.preventDefault();
+        container.show();
+        setTimeout(
+            function() {
+                container.addClass('-open');
+            }, 50
+        );
+    });
+
+    closeBtn.click(function(e) {
+        e.preventDefault();
+        closeModal();
+    });
+
+    container.click(function(e){
+        if ($(e.target).hasClass('pricing-upgrade-modal')) {
+            closeModal();
+        }
+    });
+};
+
+$.fn.scrollToFeature = function() {
+    var context = $(this),
+        buttons = $('.pricing-packages-mobile__chevron');
+
+    buttons.click(function(e) {
+        var targetElement = $('.' + $(this).attr('data-target'));
+        $('html, body').animate({
+            scrollTop: targetElement.offset().top + 30
+        }, 400);
+    });
+};
+
 
 $(document).ready(function() {
     $('.pricing-basic-features').pricingSlideShow();
     $('.pricing-premium__list').pricingSlideShow();
+    $('.btn-open-upgrade-modal').upgradeModal();
+    $('.section-hero-pricing-wrap').scrollToFeature();
 });

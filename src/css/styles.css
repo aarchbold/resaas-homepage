@@ -88,6 +88,9 @@
   background-color: #eaebef;
   color: #181e23;
 }
+.btn-pricing-feature:active {
+  top: auto;
+}
 
 .btn-pricing-premium {
   background-color: transparent;
@@ -1159,7 +1162,7 @@ body {
 .pricing-basic-features {
   position: relative;
   max-width: 68.75rem;
-  margin: 1.875rem auto 0;
+  margin: 3.75rem auto 0;
 }
 @media (max-width: 640px) {
   .pricing-basic-features {
@@ -1564,6 +1567,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
   opacity: 0;
+  display: none;
 }
 .pricing-upgrade-modal.-open {
   opacity: 1;
@@ -1577,15 +1581,24 @@ body {
 
 .pricing-updade-modal__popup {
   transition: all 0.250s;
+  position: relative;
   margin: 0 auto;
   width: 0.0625rem;
   height: 0.0625rem;
   margin-top: 6.25rem;
 }
 
+.pricing-update-modal__close {
+  position: absolute;
+  color: white;
+  top: 0.9375rem;
+  right: 0.9375rem;
+}
+
 .pricing-updade-modal__annual, .pricing-updade-modal__monthly {
   padding: 2.5rem;
   color: white;
+  text-align: center;
 }
 
 .pricing-updade-modal__annual {
@@ -1596,6 +1609,15 @@ body {
 .pricing-updade-modal__monthly {
   background-color: #707f93;
   border-radius: 0 0 0.3125rem 0.3125rem;
+}
+
+.pricing-updade-modal__header {
+  margin: 0;
+  padding: 0;
+}
+
+.pricing-updade-modal__text {
+  margin: 0.3125rem 0 1.5625rem 0;
 }
 
 /***

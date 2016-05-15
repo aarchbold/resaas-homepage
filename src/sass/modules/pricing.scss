@@ -235,7 +235,7 @@
 .pricing-basic-features {
     position: relative;
     max-width: rem(1100px);
-    margin: rem(30px) auto 0;
+    margin: rem(60px) auto 0;
     @media (max-width: $breakpoint-phablet) {
         min-height: rem(200px);
         margin-top: 0;
@@ -588,6 +588,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     opacity: 0;
+    display: none;
     &.-open {
         opacity: 1;
         .pricing-updade-modal__popup {
@@ -601,15 +602,24 @@
 
 .pricing-updade-modal__popup {
     transition: all 0.250s;
+    position: relative;
     margin: 0 auto;
     width: rem(1px);
     height: rem(1px);
     margin-top: rem(100px);
 }
 
+.pricing-update-modal__close {
+    position: absolute;
+    color: white;
+    top: rem(15px);
+    right: rem(15px);
+}
+
 .pricing-updade-modal__annual, .pricing-updade-modal__monthly {
     padding: rem(40px);
     color: white;
+    text-align: center;
 }
 
 .pricing-updade-modal__annual {
@@ -621,3 +631,13 @@
     background-color: $color-pricing-management-tools;
     border-radius: 0 0 rem(5px) rem(5px);
 }
+
+.pricing-updade-modal__header {
+    margin: 0;
+    padding: 0;
+}
+
+.pricing-updade-modal__text {
+    margin: rem(5px) 0 rem(25px) 0;
+}
+
