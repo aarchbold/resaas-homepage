@@ -92,7 +92,7 @@ $.fn.upgradeModal = function() {
 
 $.fn.scrollToFeature = function() {
     var context = $(this),
-        buttons = $('.pricing-packages-mobile__chevron');
+        buttons = $('.scroll-to-section');
 
     buttons.click(function(e) {
         var targetElement = $('.' + $(this).attr('data-target'));

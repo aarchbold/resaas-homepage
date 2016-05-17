@@ -54,7 +54,6 @@
 .btn-pricing-feature {
     @extend %btn;
     background-color: $color-deep-purple;
-    text-transform: none;
     padding: rem(18px) 0;
     min-width: rem(180px);
     &.-one {
@@ -83,7 +82,6 @@
     background-color: transparent;
     color: $color-teal;
     border: 1px solid $color-teal;
-    text-transform: none;
     padding: rem(18px) 0;
     min-width: rem(180px);
     &:hover {
@@ -97,7 +95,6 @@
     background-color: transparent;
     color: white;
     border: 1px solid white;
-    text-transform: none;
     padding: rem(18px) 0;
     min-width: rem(180px);
     &:hover {
