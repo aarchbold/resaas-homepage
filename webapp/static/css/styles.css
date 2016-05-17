@@ -965,10 +965,20 @@ body {
 
 .section-hero-pricing-wrap {
   position: relative;
-  max-width: 80rem;
+  max-width: 91.25rem;
   text-align: center;
   margin: 0 auto;
-  padding: 2.5rem 0.625rem;
+  padding: 2.5rem 3.75rem;
+}
+@media (max-width: 960px) {
+  .section-hero-pricing-wrap {
+    padding: 2.5rem 1.25rem;
+  }
+}
+@media (max-width: 765px) {
+  .section-hero-pricing-wrap {
+    padding: 2.5rem 0.3125rem;
+  }
 }
 
 .pricing-hero-title {

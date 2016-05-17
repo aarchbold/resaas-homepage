@@ -17,10 +17,16 @@
 
 .section-hero-pricing-wrap {
     position: relative;
-    max-width: rem(1280px);
+    max-width: rem(1460px);
     text-align: center;
     margin: 0 auto;
-    padding: rem(40px) rem(10px);
+    padding: rem(40px) rem(60px);
+    @media (max-width: 960px) {
+        padding: rem(40px) rem(20px);
+    }
+    @media (max-width: $breakpoint-nav) {
+        padding: rem(40px) rem(5px);
+    }
 }
 
 .pricing-hero-title {
