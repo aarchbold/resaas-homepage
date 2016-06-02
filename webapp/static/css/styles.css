@@ -38,7 +38,7 @@
   clear: both;
 }
 
-.btn-primary, .btn-secondary, .btn-primary-inverse, .btn-pricing-feature, .btn-pricing-premium, .btn-pricing-management-tools {
+.btn-primary, .btn-secondary, .btn-primary-inverse, .btn-pricing-feature, .btn-pricing-feature-premium, .btn-pricing-premium, .btn-pricing-management-tools {
   -webkit-appearance: none;
   transition: opacity 0.125s, background-color 0.125s, color 0.125s;
   display: inline-block;
@@ -56,22 +56,22 @@
   text-transform: uppercase;
 }
 @media (max-width: 640px) {
-  .btn-primary, .btn-secondary, .btn-primary-inverse, .btn-pricing-feature, .btn-pricing-premium, .btn-pricing-management-tools {
+  .btn-primary, .btn-secondary, .btn-primary-inverse, .btn-pricing-feature, .btn-pricing-feature-premium, .btn-pricing-premium, .btn-pricing-management-tools {
     padding: 0.9375rem 1.5625rem;
   }
 }
-.btn-primary:active, .btn-secondary:active, .btn-primary-inverse:active, .btn-pricing-feature:active, .btn-pricing-premium:active, .btn-pricing-management-tools:active {
+.btn-primary:active, .btn-secondary:active, .btn-primary-inverse:active, .btn-pricing-feature:active, .btn-pricing-feature-premium:active, .btn-pricing-premium:active, .btn-pricing-management-tools:active {
   top: 2px;
 }
-.btn-primary:focus, .btn-secondary:focus, .btn-primary-inverse:focus, .btn-pricing-feature:focus, .btn-pricing-premium:focus, .btn-pricing-management-tools:focus {
+.btn-primary:focus, .btn-secondary:focus, .btn-primary-inverse:focus, .btn-pricing-feature:focus, .btn-pricing-feature-premium:focus, .btn-pricing-premium:focus, .btn-pricing-management-tools:focus {
   outline: 0;
 }
-.btn-primary:hover, .btn-secondary:hover, .btn-primary-inverse:hover, .btn-pricing-feature:hover, .btn-pricing-premium:hover, .btn-pricing-management-tools:hover {
+.btn-primary:hover, .btn-secondary:hover, .btn-primary-inverse:hover, .btn-pricing-feature:hover, .btn-pricing-feature-premium:hover, .btn-pricing-premium:hover, .btn-pricing-management-tools:hover {
   background-color: #eaebef;
   color: #181e23;
   text-decoration: none;
 }
-[disabled].btn-primary, [disabled].btn-secondary, [disabled].btn-primary-inverse, [disabled].btn-pricing-feature, [disabled].btn-pricing-premium, [disabled].btn-pricing-management-tools {
+[disabled].btn-primary, [disabled].btn-secondary, [disabled].btn-primary-inverse, [disabled].btn-pricing-feature, [disabled].btn-pricing-feature-premium, [disabled].btn-pricing-premium, [disabled].btn-pricing-management-tools {
   opacity: 0.45;
 }
 
@@ -106,6 +106,19 @@
   color: #181e23;
 }
 .btn-pricing-feature:active {
+  top: auto;
+}
+
+.btn-pricing-feature-premium {
+  background-color: #1fbad6;
+  padding: 1.125rem 0;
+  min-width: 11.25rem;
+}
+.btn-pricing-feature-premium:hover {
+  background-color: #eaebef;
+  color: #181e23;
+}
+.btn-pricing-feature-premium:active {
   top: auto;
 }
 
@@ -991,6 +1004,7 @@ body {
 }
 
 .pricing-packages-item {
+  position: relative;
   float: left;
   width: 25%;
 }
@@ -1030,7 +1044,15 @@ body {
 .pricing-packages-card.-four {
   background-color: #323e52;
 }
-.pricing-packages-card .btn-pricing-feature {
+.pricing-packages-card.-premium {
+  border-radius: 0 0 0.3125rem 0.3125rem;
+}
+@media (max-width: 640px) {
+  .pricing-packages-card.-premium {
+    margin-top: 1.6rem;
+  }
+}
+.pricing-packages-card .btn-pricing-feature, .pricing-packages-card .btn-pricing-feature-premium {
   position: absolute;
   bottom: 1.875rem;
   left: 50%;
@@ -1136,6 +1158,12 @@ body {
 .pricing-packages-card__details {
   text-decoration: underline;
   display: inline-block;
+  position: absolute;
+  bottom: 6.5625rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 @media (max-width: 490px) {
   .pricing-packages-card__details {
@@ -1175,6 +1203,18 @@ body {
 }
 .pricing-packages-header strong span {
   color: #a8acb9;
+}
+.pricing-packages-header strong span.-one {
+  color: #868994;
+}
+.pricing-packages-header strong span.-two {
+  color: #1fbad6;
+}
+.pricing-packages-header strong span.-three {
+  color: #485c74;
+}
+.pricing-packages-header strong span.-four {
+  color: #323e52;
 }
 
 .pricing-packages-list {
@@ -1648,6 +1688,17 @@ body {
 
 .pricing-updade-modal__text {
   margin: 0.3125rem 0 1.5625rem 0;
+}
+
+.pricing-packages-card__premium {
+  position: absolute;
+  top: -1.625rem;
+  left: 0;
+  width: 100%;
+  background-color: #1fbad6;
+  height: 1.625rem;
+  border-radius: 0.3125rem 0.3125rem 0 0;
+  line-height: 1.8;
 }
 
 /***

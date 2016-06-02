@@ -43,6 +43,7 @@
 }
 
 .pricing-packages-item {
+    position: relative;
     float: left;
     width: 25%;
     @media (max-width: $breakpoint-big-tablet) {
@@ -77,7 +78,13 @@
     &.-four {
         background-color: $color-card-four;
     }
-    .btn-pricing-feature {
+    &.-premium {
+        border-radius: 0 0 rem(5px) rem(5px);
+        @media (max-width: $breakpoint-phablet) {
+            margin-top: 1.6rem;
+        }
+    }
+    .btn-pricing-feature, .btn-pricing-feature-premium {
         position: absolute;
         bottom: rem(30px);
         left: 50%;
@@ -171,6 +178,10 @@
     text-decoration: underline;
     // padding-top: rem(40px);
     display: inline-block;
+    position: absolute;
+    bottom: rem(105px);
+    left: 50%;
+    transform: translateX(-50%);
     @media (max-width: $breakpoint-phone) {
         display: none;
     }
@@ -203,6 +214,18 @@
         display: block;
         span {
             color: $color-card-one;
+            &.-one {
+                color: $color-pricing-card-one;
+            }
+            &.-two {
+                color: $color-teal;
+            }
+            &.-three {
+                color: #485c74;
+            }
+            &.-four {
+                color: #323e52;
+            }
         }
     }
 }
@@ -629,5 +652,17 @@
 
 .pricing-updade-modal__text {
     margin: rem(5px) 0 rem(25px) 0;
+}
+
+// premium highlite for pricing tile
+.pricing-packages-card__premium {
+    position: absolute;
+    top: rem(-26px);
+    left: 0;
+    width: 100%;
+    background-color: $color-teal;
+    height: rem(26px);
+    border-radius: rem(5px) rem(5px) 0 0;
+    line-height: 1.8;
 }
 

@@ -77,6 +77,20 @@
     }
 }
 
+.btn-pricing-feature-premium {
+    @extend %btn;
+    background-color: $color-teal;
+    padding: rem(18px) 0;
+    min-width: rem(180px);
+    &:hover {
+        background-color: $color-white;
+        color: $color-blue-grey;
+    }
+    &:active {
+        top: auto;
+    }
+}
+
 .btn-pricing-premium {
     @extend %btn;
     background-color: transparent;
