@@ -1144,10 +1144,12 @@ body {
 }
 
 .pricing-packages-card__quote {
-  font-size: 3rem;
-  line-height: 1;
+  font-size: 2.625rem;
+  line-height: 0.85;
   font-weight: bold;
   text-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+  min-height: 4.5625rem;
+  padding: 0 2.1875rem;
 }
 @media (max-width: 490px) {
   .pricing-packages-card__quote {

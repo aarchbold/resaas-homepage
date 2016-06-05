@@ -165,10 +165,12 @@
 }
 
 .pricing-packages-card__quote {
-    font-size: rem(48px);
-    line-height: 1;
+    font-size: rem(42px);
+    line-height: 0.85;
     font-weight: bold;
     text-shadow: $text-shadow-default;
+    min-height: rem(73px);
+    padding: 0 rem(35px);
     @media (max-width: $breakpoint-phone) {
         font-size: rem(34px);
     }
